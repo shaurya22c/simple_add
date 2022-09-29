@@ -12,7 +12,7 @@ pipeline {
         stage('build'){
             steps{
                 git branch: 'main', credentialsId: '55aec472-e876-415a-a546-d0ef907b7cc1', url: 'https://github.com/harsh-singhal7385/simple_add.git'
-                sh 'python -m py_compile src/add2vals.py src/calc.py'
+                sh 'python3 -m py_compile src/add2vals.py src/calc.py'
                 stash(name: 'compiled-results', includes: 'sources/*.py*') 
             }
         }
