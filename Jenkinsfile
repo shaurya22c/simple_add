@@ -18,7 +18,7 @@ pipeline {
         
         stage('test'){
             steps{
-                sh 'python3 -m unittest src/test_calc.py'
+                sh 'python3 -m unittest src/test_calc.py src/calc.py src/add2vals.py'
             }
         }
 
