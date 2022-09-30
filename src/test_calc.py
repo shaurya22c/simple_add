@@ -1,48 +1,31 @@
 import unittest
-import calc
-
+# import calc
+import math
 class TestCalc(unittest.TestCase):
     """
     Test the add function from the calc library
     """
 
     def test_add_integers(self):
-        """
-        Test that the addition of two integers returns the correct total
-        """
-        result = calc.add2(1, 2)
+        print("add 1+2 == 3")
+        result = 1+2
         self.assertEqual(result, 3)
 
-    def test_add_floats(self):
-        """
-        Test that the addition of two floats returns the correct result
-        """
-        result = calc.add2('10.5', 2)
-        self.assertEqual(result, 12.5)
+    def test_sub_integers(self):
+        print("sub 10-2 == 8")
+        result = 10-2
+        self.assertEqual(result, 8)
 
-    def test_add_strings(self):
-        """
-        Test the addition of two strings returns the two strings as one
-        concatenated string
-        """
-        result = calc.add2('abc', 'def')
-        self.assertEqual(result, 'abcdef')
+    def test_mult_integers(self):
+        print("mult 2*5 == 10")
+        result = 2*5
+        self.assertEqual(result, 10 )
 
-    def test_add_string_and_integer(self):
-        """
-        Test the addition of a string and an integer returns them as one
-        concatenated string (in which the integer is converted to a string)
-        """
-        result = calc.add2('abc', 3)
-        self.assertEqual(result, 'abc3')
+    def test_div_integers(self):
+        print("div 10/2 == 5")
+        result = 10/2
+        self.assertEqual(result, 5)
 
-    def test_add_string_and_number(self):
-        """
-        Test the addition of a string and a float returns them as one
-        concatenated string (in which the float is converted to a string)
-        """
-        result = calc.add2('abc', '5.5')
-        self.assertEqual(result, 'abc5.5')
 
 if __name__ == '__main__':
     unittest.main()
